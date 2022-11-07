@@ -1,6 +1,5 @@
 import random
 
-
 # TRANSFORMA BASE: 1ª FUNÇÃO
 def transforma_base (lista):
     novodic={}
@@ -12,7 +11,6 @@ def transforma_base (lista):
         if n not in novodic:
                 
             novodic[n] =[]
-            print(dics)
                 
             novodic[n].append(dics)
         else:
@@ -77,7 +75,6 @@ def valida_questoes(lista):
 
 # SORTEIA UMA QUESTÃO
 
-import random
 def sorteia_questao(dic,nivel):
     questao = random.choice(dic[nivel])
     return questao
