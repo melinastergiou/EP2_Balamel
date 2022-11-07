@@ -75,4 +75,28 @@ def valida_questoes(lista):
 
 # SORTEIA UMA QUESTÃO
 
-#
+import random
+def sorteia_questao(dic,nivel):
+    questao = random.choice(dic[nivel])
+    return questao
+
+# SORTEIA UMA QUESTÃO INÉDITA
+
+def sorteia_questao_inedida(dic,nivel,sorteadas):
+    x = sorteia_questao(dic,nivel)
+    while x not in sorteadas:
+        sorteadas.append(x)
+        x = sorteia_questao(dic,nivel)
+    return x
+
+# STRING PARA TEXTO
+
+def questao_para_texto(questao,n):
+    pergunta = questao['titulo']
+    A = questao['opcoes']['A']
+    B = questao['opcoes']['B']
+    C = questao['opcoes']['C']
+    D = questao['opcoes']['D']
+
+    saida = '----------------------------------------' +'\n'+'QUESTAO' + ' ' + str(n)+ '\n' + '\n'+ pergunta+ '\n'+'\n'+'RESPOSTAS:' + '\n'+ 'A:' +' '+ A + '\n'+'B:' + ' '+ B + '\n' + 'C:'+' ' + C + '\n' + 'D:'+' ' + D
+    return saida
