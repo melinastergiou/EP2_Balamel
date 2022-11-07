@@ -1,3 +1,5 @@
+import random
+
 
 # TRANSFORMA BASE: 1ª FUNÇÃO
 def transforma_base (lista):
@@ -100,3 +102,46 @@ def questao_para_texto(questao,n):
 
     saida = '----------------------------------------' +'\n'+'QUESTAO' + ' ' + str(n)+ '\n' + '\n'+ pergunta+ '\n'+'\n'+'RESPOSTAS:' + '\n'+ 'A:' +' '+ A + '\n'+'B:' + ' '+ B + '\n' + 'C:'+' ' + C + '\n' + 'D:'+' ' + D
     return saida
+
+# GERA AJUDA EM UMA QUESTÃO
+
+def gera_ajuda (dic):
+
+    correta= dic['correta'] 
+    lista = []
+
+    for c, v, in (dic['opcoes']).items():
+        
+        if c!=correta and c not in lista:
+
+            lista.append(c)
+        
+        
+    num= random.randint(1,2)
+    if num ==1:
+        dica= random.choice(lista)
+            
+    else:
+        dica = []
+        i = 0
+        while len(dica)!= 2:
+            item = random.choice(lista)
+           
+            if item not in dica:
+                dica.append(item)
+            i+=1
+        
+    if len(dica)==2:
+        p1=dica[0] 
+        p2=dica[1]
+            
+        v1 = dic['opcoes'][p1]
+        v2 = dic['opcoes'][p2]
+            
+        r =( v1 + ' | ' + v2)
+  
+        return(f'DICA:\nOpções certamente erradas: {r}')
+    else:
+        v = dic['opcoes'][dica]
+            
+        return(f'DICA:\nOpções certamente erradas: {v}')
