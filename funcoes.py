@@ -81,7 +81,7 @@ def sorteia_questao(dic,nivel):
 
 # SORTEIA UMA QUESTÃO INÉDITA
 
-def sorteia_questao_inedida(dic,nivel,sorteadas):
+def sorteia_questao_inedita(dic,nivel,sorteadas):
     x = sorteia_questao(dic,nivel)
     while x not in sorteadas:
         sorteadas.append(x)
@@ -104,12 +104,12 @@ def questao_para_texto(questao,n):
 
 def gera_ajuda (dic):
 
-    correta= dic['correta'] 
+    corr= dic['correta'] 
     lista = []
 
     for c, v, in (dic['opcoes']).items():
         
-        if c!=correta and c not in lista:
+        if c!=corr and c not in lista:
 
             lista.append(c)
         
