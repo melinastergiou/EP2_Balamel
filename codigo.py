@@ -1,15 +1,17 @@
 from funcoes import * 
 from base_dados import quest
+from cores import *
 
+# validando base de dados e ajustando
 dic2 = valida_questoes(quest)
 for elementos in dic2:
     if elementos=={}:
         dic = transforma_base(quest)
-        
+
 p = 'S'
 while p=='S':
     
-    ajudas = 2 # colocamos 3 para ajustar no código, mas apenas 2 estão sendo utilizadas
+    ajudas = 2 
     pular = 3
     pontos = 0 # para dar certo o valor dos prêmios 
     premios = [0, 1000, 5000, 10000, 30000, 50000, 100000, 300000, 500000, 1000000]
@@ -18,34 +20,30 @@ while p=='S':
     pergunta = 1 # número das questões
     sorteadas = [] # lista das perguntas já sorteadas
     
-    print('Bem vindo ao $$ JOGO DA FORTUNA $$ de dsoft!\nAqui, você pode enrriquecer...\n')
+    print('\nBem vindo(a) ao...\n ' +GREEN+ ' $$ JOGO DA FORTUNA $$ '+RESET+ '\nAqui, você pode enrriquecer...\n')
+    
     nome = input('Qual seu nome? ')
     print('\n')
     print(f'Ok {nome}, você tem direito a pular 3 vezes e 2 ajudas!')
-    print('As opções de resposta são  "A", "B", "C", "D", "ajuda", "pula" e "parar"!')
+    print('As opções de resposta são' +BLUE+ ' "A", "B", "C", "D","ajuda", "pula" e "parar"'+RESET+'!')
     print('\n')
-    enter = input('Aperte ENTER para continuar...')
+    enter = input('Aperte' + YELLOW+ ' ENTER ' +RESET +'para continuar...')
     nivel = niveis[0]
     print('\n')
-    print('O jogo já vai começar! Lá vem a primeira questão!')
+    print(BOLD+ 'O jogo já vai começar! Lá vem a primeira questão!'+ RESET)
     print(f'Vamos começar com o nível {nivel}\n')
-    enter = input('Aperte ENTER para continuar...')
+    enter = input('Aperte' + YELLOW+ ' ENTER ' +RESET +'para continuar...')
     premio=premios[pontos]
   
     sorteio = sorteia_questao_inedita(dic,nivel,sorteadas)
     
-    # FALTA USAR O VALIDA QUESTÃO MEEEEEL
-    # valida= valida_questao(sorteio)
-
     print(sorteio)
     questao= sorteio['titulo']
     opcoes = questao_para_texto(sorteio, pergunta)
     print(pergunta)
     correta = sorteio['correta']
-    print(questao)
     print(opcoes)
-    print(correta)
-    print(pergunta)
+  
     resposta = input('\nQual a sua resposta? ')
 
     p2='N'
@@ -58,9 +56,9 @@ while p=='S':
             nivel = niveis[0]
             pergunta+=1
             premio=premios[pontos]
-            print(f'\nVocê acertou! Seu prêmio atual é de {premio}!')
+            print('\nVocê acertou! Seu prêmio atual é de '+ GREEN+ f'{premio}!'+RESET)
 
-            enter = input('Aperte ENTER para continuar...')
+            enter = input('Aperte' + YELLOW+ ' ENTER ' +RESET +'para continuar...')
             
             sorteio = sorteia_questao_inedita(dic,nivel,sorteadas)
             questao= sorteio['titulo']
@@ -68,7 +66,7 @@ while p=='S':
 
             correta = sorteio['correta']
             print(opcoes)
-            print(correta)
+       
 
             resposta = input('\nQual a sua resposta? ') 
         
@@ -77,13 +75,14 @@ while p=='S':
             nivel = niveis[1]
 
             if pergunta>=3:        
-                print(f'WOW, você passou para o nível {nivel}!')
+                print(BOLD+f'WOW, você passou para o nível {nivel}!'+RESET)
 
             pontos+=1
             pergunta+=1
             premio=premios[pontos]
-            print(f'\nVocê acertou! Seu prêmio atual é de {premio}!')
-            enter = input('Aperte ENTER para continuar...')
+            print('\nVocê acertou! Seu prêmio atual é de '+ GREEN+ f'{premio}!'+RESET)
+
+            enter = input('Aperte' + YELLOW+ ' ENTER ' +RESET +'para continuar...')
             
             sorteio = sorteia_questao_inedita(dic,nivel,sorteadas)
 
@@ -92,7 +91,7 @@ while p=='S':
 
             correta = sorteio['correta']
             print(opcoes)
-            print(correta)
+            
 
             resposta = input('\nQual a sua resposta? ') 
 
@@ -100,14 +99,15 @@ while p=='S':
             nivel = niveis[2]
 
             if pergunta==6:
-                print(f'\nWOW, você passou para o nível {nivel}!')
+                print(BOLD+ f'\nWOW, você passou para o nível {nivel}!'+ RESET)
 
             pontos+=1
 
             pergunta+=1
             premio=premios[pontos]
-            print(f'\nVocê acertou! Seu prêmio atual é de {premio}!')
-            enter = input('Aperte ENTER para continuar...')
+            print('\nVocê acertou! Seu prêmio atual é de '+ GREEN+ f'{premio}!'+RESET)
+
+            enter = input('Aperte' + YELLOW+ ' ENTER ' +RESET +'para continuar...')
             
             sorteio = sorteia_questao_inedita(dic,nivel,sorteadas)
 
@@ -117,12 +117,12 @@ while p=='S':
 
             correta = sorteio['correta']
             print(opcoes)
-            print(correta)
+            
 
             resposta = input('\nQual a sua resposta? ') 
 
         elif premio==1000000:
-            print('\nPARABÉNS! Você zerou o jogo e virou um MILIONÁRIO')
+            print(BOLD+'\nPARABÉNS!'+RESET+ ' Você zerou o jogo e virou um '+GREEN+'MILIONÁRIO'+RESET)
 
         elif resposta =='ajuda':
 
@@ -130,8 +130,8 @@ while p=='S':
             
             
             if ajudas<0: 
-                print('Ops! Você não tem mais direito a ajuda...\n')
-                enter = input('Aperte ENTER para continuar...')
+                print(MAGENTA+'Ops! Você não tem mais direito a ajuda...\n'+RESET)
+                enter = input('Aperte' + YELLOW+ ' ENTER ' +RESET +'para continuar...')
                 
                 sorteio = sorteia_questao_inedita(dic,nivel,sorteadas)
 
@@ -140,7 +140,7 @@ while p=='S':
 
                 correta = sorteio['correta']
                 print(opcoes)
-                print(correta)
+                
 
                 resposta = input('\nQual a sua resposta? ') 
 
@@ -160,7 +160,7 @@ while p=='S':
                 print(f'\nOk pulando...Você ainda tem {pular} pulos!')
 
                 premio=premios[pontos]
-                enter = input('Aperte ENTER para continuar...')
+                enter = input('Aperte' + YELLOW+ ' ENTER ' +RESET +'para continuar...')
                 
                 sorteio = sorteia_questao_inedita(dic,nivel,sorteadas)
 
@@ -170,14 +170,14 @@ while p=='S':
 
                 correta = sorteio['correta']
                 print(opcoes)
-                print(correta)
+                
 
                 resposta = input('\nQual a sua resposta? ')
             elif pular==0:
                 print(f'\nOk pulando... ATENÇÃO: Você não tem mais pulos a partir de agora!')
 
                 premio=premios[pontos]
-                enter = input('Aperte ENTER para continuar...')
+                enter = input('Aperte' + YELLOW+ ' ENTER ' +RESET +'para continuar...')
                 
                 sorteio = sorteia_questao_inedita(dic,nivel,sorteadas)
 
@@ -187,23 +187,23 @@ while p=='S':
 
                 correta = sorteio['correta']
                 print(opcoes)
-                print(correta)
+                
 
                 resposta = input('\nQual a sua resposta? ')
 
             else:
-                print('Ops.. Não deu!\nVocê não tem mais direito a pulos')
+                print(MAGENTA+'Ops.. Não deu!\nVocê não tem mais direito a pulos'+RESET)
                 print(opcoes)
                 resposta = input('\nQual a sua resposta? ')
 
         elif resposta!=correta and resposta in respostas:
             resposta = 'incorreta'
-            print('Opa... você errou :(\nInfelizmente vai sair sem nada...')
+            print(RED+'Opa... você errou :(\nInfelizmente vai sair sem nada...'+RESET)
             break
 
         elif resposta=='parar':
             
-            p2= input(f'Certez que você deseja parar [S/N]? Caso sua resposta seja "S", você sairá com R$ {premio}')
+            p2= input('Certeza que você deseja parar [S/N]?\nCaso sua resposta seja "S", você sairá com'+CYAN+' R$ {premio}'+RESET)
         
             if p2 =='N':
                 resposta= input('\nQual a sua resposta? ')
@@ -211,20 +211,17 @@ while p=='S':
                 break
         
         else:
-            print('Opção inválida!')
-            print('As opcções de resposta são  "A", "B", "C", "D", "ajuda", "pula" e "parar"!')
+            print(CYAN+'Opção inválida!'+RESET)
+            print('As opções de resposta são' +BLUE+ ' "A", "B", "C", "D","ajuda", "pula" e "parar"'+RESET+'!')
             resposta = input('\nQual a sua resposta? ')
 
     if resposta=='incorreta':
-        p = input('Deseja reniciar o jogo [S/N]? ')
-
-    elif p=='S' or p2=='S':
+        p = input('\nDeseja reniciar o jogo [S/N]? ')
+        if p=='N':
+            print(f'\nOk você parou!')
+    elif p2=='S':
+        print(f'\nOk você parou!')
+        break
+    elif p=='N' or p2=='S':
             print(f'\nOk você parou! Seu prêmio é de {premio} reais.')
-
-    # else:
-    # # deveria retornar tudo do início (parte de onde parou na pergunta que parou !!!!!!!!!!!!)
-
-    #         print(f'\nOk você parou! Seu prêmio é de {premio} reais.')
-    #         p='N'
-
-   
+    

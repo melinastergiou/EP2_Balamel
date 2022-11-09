@@ -1,4 +1,5 @@
 import random
+from cores import *
 
 # TRANSFORMA BASE: 1ª FUNÇÃO
 def transforma_base (lista):
@@ -99,7 +100,7 @@ def questao_para_texto(questao,n):
     C = questao['opcoes']['C']
     D = questao['opcoes']['D']
 
-    saida = '----------------------------------------' +'\n'+'QUESTAO' + ' ' + str(n)+ '\n' + '\n'+ pergunta+ '\n'+'\n'+'RESPOSTAS:' + '\n'+ 'A:' +' '+ A + '\n'+'B:' + ' '+ B + '\n' + 'C:'+' ' + C + '\n' + 'D:'+' ' + D
+    saida = '----------------------------------------' +'\n'+BLUE+'QUESTAO' + ' ' + str(n)+RESET+ '\n' + '\n'+ pergunta+ '\n'+'\n'+'RESPOSTAS:' + '\n'+ 'A:' +' '+ A + '\n'+'B:' + ' '+ B + '\n' + 'C:'+' ' + C + '\n' + 'D:'+' ' + D
     return saida
 
 # GERA AJUDA EM UMA QUESTÃO
