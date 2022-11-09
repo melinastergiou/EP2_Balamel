@@ -66,13 +66,16 @@ def valida_questao(dic):
 # VALIDA LISTA DE QUESTÕES 
 
 def valida_questoes(lista):
-    saida = []
     i = 0
-    for questao in lista:
-        x = valida_questao(questao)
-        saida.append(x)
-    return saida
+    novalista=[]
+    while i in range(len(lista)):
+        questao = lista[i]
+        ele = valida_questao(questao)
+        novalista.append(ele)
 
+        i = i +1
+
+    return novalista    
 # SORTEIA UMA QUESTÃO
 
 def sorteia_questao(dic,nivel):
@@ -80,12 +83,11 @@ def sorteia_questao(dic,nivel):
     return questao
 
 # SORTEIA UMA QUESTÃO INÉDITA
-
 def sorteia_questao_inedita(dic,nivel,sorteadas):
     x = sorteia_questao(dic,nivel)
-    while x not in sorteadas:
-        sorteadas.append(x)
+    while x in sorteadas:
         x = sorteia_questao(dic,nivel)
+    sorteadas.append(x)
     return x
 
 # STRING PARA TEXTO

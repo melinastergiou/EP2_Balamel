@@ -1,7 +1,11 @@
 from funcoes import * 
 from base_dados import quest
 
-dic = transforma_base(quest)
+dic2 = valida_questoes(quest)
+for elementos in dic2:
+    if elementos=={}:
+        dic = transforma_base(quest)
+        
 p = 'S'
 while p=='S':
     
@@ -44,7 +48,9 @@ while p=='S':
     print(pergunta)
     resposta = input('\nQual a sua resposta? ')
 
-    while resposta!='parar':
+    p2='N'
+
+    while p2=='N':
 
         if  resposta==correta and pergunta<3:
                 
@@ -57,7 +63,6 @@ while p=='S':
             enter = input('Aperte ENTER para continuar...')
             
             sorteio = sorteia_questao_inedita(dic,nivel,sorteadas)
-
             questao= sorteio['titulo']
             opcoes = questao_para_texto(sorteio, pergunta)
 
@@ -195,6 +200,15 @@ while p=='S':
             resposta = 'incorreta'
             print('Opa... você errou :(\nInfelizmente vai sair sem nada...')
             break
+
+        elif resposta=='parar':
+            
+            p2= input(f'Certez que você deseja parar [S/N]? Caso sua resposta seja "S", você sairá com R$ {premio}')
+        
+            if p2 =='N':
+                resposta= input('\nQual a sua resposta? ')
+            else:
+                break
         
         else:
             print('Opção inválida!')
@@ -204,16 +218,13 @@ while p=='S':
     if resposta=='incorreta':
         p = input('Deseja reniciar o jogo [S/N]? ')
 
-        if p=='S':
+    elif p=='S' or p2=='S':
             print(f'\nOk você parou! Seu prêmio é de {premio} reais.')
 
-    else:
-        p2= input(f'Certez que você deseja parar [S/N]? Caso sua resposta seja "S", você sairá com R$ {premio}')
-        
-        if p2 =='N':
-            resposta= input('\nQual a sua resposta? ') # deveria retornar tudo do início (parte de onde parou na pergunta que parou !!!!!!!!!!!!)
-        else:
-            print(f'\nOk você parou! Seu prêmio é de {premio} reais.')
-            p='N'
+    # else:
+    # # deveria retornar tudo do início (parte de onde parou na pergunta que parou !!!!!!!!!!!!)
+
+    #         print(f'\nOk você parou! Seu prêmio é de {premio} reais.')
+    #         p='N'
 
    
