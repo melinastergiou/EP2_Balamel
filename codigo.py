@@ -203,7 +203,7 @@ while p=='S':
 
         elif resposta=='parar':
             
-            p2= input('Certeza que você deseja parar [S/N]?\nCaso sua resposta seja "S", você sairá com'+CYAN+' R$ {premio}'+RESET)
+            p2= input('Certeza que você deseja parar [S/N]?\nCaso sua resposta seja "S", você sairá com'+CYAN+f' R$ {premio}'+RESET)
         
             if p2 =='N':
                 resposta= input('\nQual a sua resposta? ')
