@@ -156,5 +156,106 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
          {'titulo': 'O que é Necrose?',
           'nivel': 'dificil',
           'opcoes': {'A': 'Uma banda de Rock', 'B': 'Uma marca de luxo', 'C': 'Cidade Francesa', 'D': 'Morte de tecido orgânico'},
+          'correta': 'D'},
+
+          {'titulo': 'Qual canal passou a novela "Caminho das Índias"?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Tv Brasil', 'B': 'SBT', 'C': 'Globo', 'D': 'SporTV'},
+          'correta': 'C'},
+
+          {'titulo': 'Quem era o atacante da seleção brasileira em 2002?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Ronaldo Fenômeno', 'B': 'Neymar', 'C': 'Pelé', 'D': 'Romário'},
+          'correta': 'A'},
+
+          {'titulo': 'Qual país estava envolvido na GUerra do Iraque (2003)?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Israel', 'B': 'Canadá', 'C': 'Coreia do Norte', 'D': 'Iraque'},
+          'correta': 'D'},
+
+          {'titulo': 'Em que ano os portugueses chegaram noo Brasil?',
+          'nivel': 'facil',
+          'opcoes': {'A': '1492', 'B': '1500', 'C': '1808', 'D': '1822'},
+          'correta': 'B'},
+
+          {'titulo': 'Qual dulpa fazia parte do programa "Amigos"?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'João Paulo e Daniel', 'B': 'Jorge e Mateus', 'C': 'Leandro e Leonardo', 'D': 'Fernando e Sorocaba'},
+          'correta': 'C'},
+
+          {'titulo': 'Qual equipe Ayrton Senna nunca correu?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Lotus', 'B': 'McLaren', 'C': 'Williams', 'D': 'Ferrai'},
+          'correta': 'D'},
+
+          {'titulo': 'Complete o  ditado: "Filho de peixe, peixinho (...)?"',
+          'nivel': 'facil',
+          'opcoes': {'A': 'É', 'B': 'Terá', 'C': 'Será', 'D': 'Comerá'},
+          'correta': 'A'},
+
+          {'titulo': 'De qual animal vem o cordeiro?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Carneiro e Ovelha', 'B': 'Bode e Cabra', 'C': 'Boi e Vaca', 'D': 'Galo e Galinha'},
+          'correta': 'A'},
+
+          {'titulo': 'Qual desses carros era considerado um "modelo popular"?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'VW GOLF', 'B': 'VW GOL', 'C': 'FIAT Mobi', 'D': 'Toyota Corolla'},
+          'correta': 'B'},
+
+          {'titulo': 'Pablo Picasso era um?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Pintor', 'B': 'Escultor', 'C': 'Poeta', 'D': 'Todas as anteriores'},
+          'correta': 'D'},
+
+          {'titulo': 'Qual time Pelé nunca jogou?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'New York Cosmos', 'B': 'Bauru', 'C': 'Real Madrid', 'D': 'Santos'},
+          'correta': 'C'},
+
+          {'titulo': 'Qual desses países fazem fronteria com o Brasil?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Chile', 'B': 'França', 'C': 'Panamá', 'D': 'Equador'},
+          'correta': 'B'},
+
+          {'titulo': 'Qual dessas cidades não fica no estado de São Paulo?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'RIbeirão Preto', 'B': 'Londrina', 'C': 'Mogi-Guaçu', 'D': 'Guaratinguetá'},
+          'correta': 'B'},
+
+          {'titulo': 'Qual desses filmes não ganhou o Oscar?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Cidade dos Anjos', 'B': 'Titanic', 'C': 'Argo', 'D': 'Quem Quer Ser Um Milionário'},
+          'correta': 'A'},
+
+          {'titulo': 'Qual  país Napoleão Bonaparte já derrotou?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Reino Unido', 'B': 'Estados Unidos', 'C': 'Japão', 'D': 'Aústria'},
+          'correta': 'C'},
+
+          {'titulo': 'Qual país nunca fez parte da União Soviética?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Croácia', 'B': 'Quirguistão', 'C': 'Vietnã do Norte', 'D': 'Finlândia'},
+          'correta': 'B'},
+
+          {'titulo': 'Qual time ganhou a Copa do Brasil de forma invicta?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Criciúma', 'B': 'Sport', 'C': 'Santo André', 'D': 'Paulista'},
+          'correta': 'A'},
+
+          {'titulo': 'Kurt Cobain era vocalista de qual banda?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Soundgarden', 'B': 'Nirvana', 'C': 'Pearl Jam', 'D': 'Foo Fighters'},
+          'correta': 'B'},
+
+          {'titulo': 'Qual faculdade Tom Brady frequentou?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Penn State', 'B': 'California', 'C': 'Michigan', 'D': 'Notre Dame'},
+          'correta': 'C'},
+
+          {'titulo': 'Quem  foi o último Primeiro-Ministro do Brasil',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Tancredo Neves', 'B': 'Francisco Brochado da Rocha', 'C': 'João Goulart', 'D': 'Hermes Lima'},
           'correta': 'D'}
+
         ]
