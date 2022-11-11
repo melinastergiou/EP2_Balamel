@@ -231,7 +231,7 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           {'titulo': 'Qual  país Napoleão Bonaparte já derrotou?',
           'nivel': 'medio',
           'opcoes': {'A': 'Reino Unido', 'B': 'Estados Unidos', 'C': 'Japão', 'D': 'Aústria'},
-          'correta': 'C'},
+          'correta': 'D'},
 
           {'titulo': 'Qual país nunca fez parte da União Soviética?',
           'nivel': 'dificil',
