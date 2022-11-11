@@ -156,5 +156,114 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
          {'titulo': 'O que é Necrose?',
           'nivel': 'dificil',
           'opcoes': {'A': 'Uma banda de Rock', 'B': 'Uma marca de luxo', 'C': 'Cidade Francesa', 'D': 'Morte de tecido orgânico'},
-          'correta': 'D'}
-        ]
+          'correta': 'D'},
+
+         {'titulo': 'Qual é a capital da Somália?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Mogadíscio', 'B': 'Cairo', 'C': 'Dar es Salaam', 'D': 'Luanda'},
+          'correta': 'A'},
+
+         {'titulo': 'Qual time Pelé não jogou?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'New York Cosmos', 'B': 'Santos', 'C': 'Real Madrid', 'D': 'Bauru'},
+          'correta': 'C'},
+
+         {'titulo': 'Qual desses países fazia parte da União Soviética?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Tajiquistão', 'B': 'Coreia do Norte', 'C': 'Eslováquia', 'D': 'Mongólia'},
+          'correta': 'A'},
+
+         {'titulo': 'Em que ano ocorreu a Semana de Arte Moderna?',
+          'nivel': 'medio',
+          'opcoes': {'A': '1913', 'B': '1999', 'C': '2019', 'D': '1922'},
+          'correta': 'D'},
+
+         {'titulo': 'Em qual ilha Napoleão Bonaparte nasceu?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Sardenha', 'B': 'Córsega', 'C': 'Islândia', 'D': 'Malta'},
+          'correta': 'B'},
+
+         {'titulo': 'Complete a letra: "Hoje é só farra, pinga e (...)?"',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Festa', 'B': 'Amor', 'C': 'Foguete', 'D': 'Torresmo'},
+          'correta': 'C'},
+
+         {'titulo': 'Qual faculdade Tom Brady frequentou?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Universidade de Michigan', 'B': 'Florida State', 'C': 'Universidade de Columbus', 'D': 'Universidade de Harvard'},
+          'correta': 'A'},
+
+         {'titulo': 'Qual filme não ganhou o Oscar Awardsde melhor filme?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Titanic', 'B': 'Cidade dos Anjos', 'C': 'Senhor dos Anéis', 'D': 'Argo'},
+          'correta': 'B'},
+
+         {'titulo': 'Qual dessas bandas não é de rock?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Capital Inicial', 'B': 'Red Hot Chili Peppers', 'C': 'Imagine Dragons', 'D': 'Oasis'},
+          'correta': 'C'},
+
+         {'titulo': 'Qual time não foi campeão da Copa do Brasil?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Santo André', 'B': 'Cruzeiro', 'C': 'Paulista', 'D': 'São Paulo'},
+          'correta': 'D'},
+
+         {'titulo': 'Qual desses países faz fronteira com o Brasil?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'França', 'B': 'Chile', 'C': 'Guatemala', 'D': 'China'},
+          'correta': 'A'},
+
+         {'titulo': 'Quando os portugueses chegaram no Brasil?',
+          'nivel': 'facil',
+          'opcoes': {'A': '1500', 'B': '1808', 'C': '1889', 'D': '1689'},
+          'correta': 'A'},
+
+         {'titulo': 'Quem era o atacante da seleção brasileira em 2002?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Pelé', 'B': 'Romário', 'C': 'Marcos', 'D': 'Ronaldo Fenômeno'},
+          'correta': 'D'},
+
+          {'titulo': 'Pablo Picasso era?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Filipino', 'B': 'Espanhol', 'C': 'Mexicano', 'D': 'Argentino'},
+          'correta': 'B'},
+
+          {'titulo': 'Qual país estava involvido na Guerra do Iraque (2003)?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Brasil', 'B': 'Canadá', 'C': 'Iraque', 'D': 'Israel'},
+          'correta': 'C'},
+
+          {'titulo': 'Complete o ditado: "Filinho de peixe, peixinho (...)?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Peixe', 'B': 'Terá', 'C': 'Será', 'D': 'É'},
+          'correta': 'D'},
+
+          {'titulo': 'Em qual equipe Ayrton Senna foi campeão do mundo ?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Ferrari', 'B': 'McLaren', 'C': 'Williams', 'D': 'Lotus'},
+          'correta': 'B'},
+
+          {'titulo': 'Qual dupla não fazia parte do grupo Amigos?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Zezé de Camargo e Luciano', 'B': 'Jorge e Mateus', 'C': 'Leandro e Leonardo', 'D': 'Chitãozinho e Xororó'},
+          'correta': 'B'},
+
+          {'titulo': 'Qual desses carros não era um modelo "popular"?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Fiat Palio', 'B': 'VW GOL', 'C': 'Fiat Uno', 'D': 'Honda Civic'},
+          'correta': 'D'},
+
+          {'titulo': 'Kurt Cobain era vocalista de qual banda?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Titãs', 'B': 'Coldplay', 'C': 'Nirvana', 'D': 'Metallica'},
+          'correta': 'C'},
+
+          {'titulo': 'Qual novela estreou em 2009 na Globo?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'CAminho das Índias', 'B': 'Chocolate com Pimenta', 'C': 'Vale Tudo', 'D': 'Cheias de Charme'},
+          'correta': 'A'},
+
+          
+
+          ]
+

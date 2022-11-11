@@ -24,4 +24,4 @@ print('\n')
 print('QUESTÃO 1')
 
 # indentificar nível anftes 
-sorteia_questao(dic,nivel)
+chama  = sorteia_questao(dic,nivel)
