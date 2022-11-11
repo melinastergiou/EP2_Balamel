@@ -1,4 +1,5 @@
 import random
+from cores import *
 
 # TRANSFORMA BASE: 1ª FUNÇÃO
 def transforma_base (lista):
@@ -66,13 +67,16 @@ def valida_questao(dic):
 # VALIDA LISTA DE QUESTÕES 
 
 def valida_questoes(lista):
-    saida = []
     i = 0
-    for questao in lista:
-        x = valida_questao(questao)
-        saida.append(x)
-    return saida
+    novalista=[]
+    while i in range(len(lista)):
+        questao = lista[i]
+        ele = valida_questao(questao)
+        novalista.append(ele)
 
+        i = i +1
+
+    return novalista    
 # SORTEIA UMA QUESTÃO
 
 def sorteia_questao(dic,nivel):
@@ -80,12 +84,11 @@ def sorteia_questao(dic,nivel):
     return questao
 
 # SORTEIA UMA QUESTÃO INÉDITA
-
-def sorteia_questao_inedida(dic,nivel,sorteadas):
+def sorteia_questao_inedita(dic,nivel,sorteadas):
     x = sorteia_questao(dic,nivel)
-    while x not in sorteadas:
-        sorteadas.append(x)
+    while x in sorteadas:
         x = sorteia_questao(dic,nivel)
+    sorteadas.append(x)
     return x
 
 # STRING PARA TEXTO
@@ -97,19 +100,19 @@ def questao_para_texto(questao,n):
     C = questao['opcoes']['C']
     D = questao['opcoes']['D']
 
-    saida = '----------------------------------------' +'\n'+'QUESTAO' + ' ' + str(n)+ '\n' + '\n'+ pergunta+ '\n'+'\n'+'RESPOSTAS:' + '\n'+ 'A:' +' '+ A + '\n'+'B:' + ' '+ B + '\n' + 'C:'+' ' + C + '\n' + 'D:'+' ' + D
+    saida = '----------------------------------------' +'\n'+BLUE+'QUESTAO' + ' ' + str(n)+RESET+ '\n' + '\n'+ pergunta+ '\n'+'\n'+'RESPOSTAS:' + '\n'+ 'A:' +' '+ A + '\n'+'B:' + ' '+ B + '\n' + 'C:'+' ' + C + '\n' + 'D:'+' ' + D
     return saida
 
 # GERA AJUDA EM UMA QUESTÃO
 
 def gera_ajuda (dic):
 
-    correta= dic['correta'] 
+    corr= dic['correta'] 
     lista = []
 
     for c, v, in (dic['opcoes']).items():
         
-        if c!=correta and c not in lista:
+        if c!=corr and c not in lista:
 
             lista.append(c)
         
