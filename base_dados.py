@@ -261,7 +261,7 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           {'titulo': 'Qual novela estreou em 2009 na Globo?',
           'nivel': 'facil',
           'opcoes': {'A': 'CAminho das Índias', 'B': 'Chocolate com Pimenta', 'C': 'Vale Tudo', 'D': 'Cheias de Charme'},
-          'correta': 'A'},
+          'correta': 'A'}
 
           
 
