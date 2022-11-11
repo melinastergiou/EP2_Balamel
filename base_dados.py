@@ -215,7 +215,7 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
 
           {'titulo': 'Qual desses países fazem fronteria com o Brasil?',
           'nivel': 'medio',
-          'opcoes': {'A': 'Chile', 'B': 'França', 'C': 'Panamá', 'D': 'Equador'},
+          'opcoes': {'A': 'Chile', 'B': 'Argentina', 'C': 'Panamá', 'D': 'Equador'},
           'correta': 'B'},
 
           {'titulo': 'Qual dessas cidades não fica no estado de São Paulo?',
